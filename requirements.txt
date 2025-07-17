@@ -1,7 +1,2 @@
 gunicorn
-validate_email==1.3
-requests==2.26.0
-dnspython==2.4.2
-pyinstaller==4.5.1
-pillow==8.4.0
 flask
