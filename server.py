@@ -5,8 +5,22 @@ app = Flask(__name__)
 
 # In-memory license store for demo. Use a database for production!
 licenses = {
-    "ABCD1234EFGH5678": None,  # Not activated yet
+    "72DP5AP55PZH187S": None,  # Not activated yet
     "WXYZ8765IJKL4321": None,
+    "ABCD1234EFGH5678": None,
+    "EFGH5678IJKL1234": None,
+    "IJKL4321MNOP5678": None,
+    "MNOP5678QRST1234": None,
+    "QRST1234UVWX5678": None,
+    "UVWX5678YZAB1234": None,
+    "YZAB1234CDEF5678": None,
+    "CDEF5678GHIK1234": None,
+    "GHIK1234LMNO5678": None,
+    "LMNO5678PQRS1234": None,
+    "PQRS1234TUVW5678": None,
+    "TUVW5678XYZA1234": None,
+    "XYZA1234BCDE5678": None,
+    "BCDE5678FGHI1234": None,
     # Add more valid license keys here
 }
 
