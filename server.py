@@ -1,6 +1,8 @@
 # Save as server.py
 from flask import Flask, request, jsonify
 
+API_SECRET_KEY = "8hJk2vX1pQw3rT5s6uV7yZ9aBcDeFgHiJkLmNoPqRsTuVwXyZ"
+
 app = Flask(__name__)
 
 # In-memory license store for demo. Use a database for production!
@@ -29,6 +31,11 @@ def activate():
     data = request.json
     license_key = data.get('license_key')
     device_id = data.get('device_id')
+    api_secret = data.get('api_secret')
+    
+    if api_secret != API_SECRET_KEY:
+        return jsonify({"valid": False, "error": "Invalid API secret"}), 403
+
     if not license_key or not device_id:
         return jsonify({"success": False, "error": "Missing data"}), 400
 
